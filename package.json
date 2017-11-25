@@ -1,0 +1,38 @@
+{
+  "name": "fido2-server-demo",
+  "version": "0.0.1",
+  "description": "Examples and demo code for FIDO2 / WebAuthn servers",
+  "main": "index.js",
+  "scripts": {
+    "test": "istanbul cover _mocha",
+    "docs": "jsdoc -c ./.jsdoc-conf.json",
+    "publish": "istanbul-coveralls && gh-pages --silent --repo https://$GH_TOKEN@github.com/apowers313/fido2-server-demo.git --dist docs"
+  },
+  "keywords": [
+    "fido",
+    "fido2",
+    "webauthn"
+  ],
+  "author": "Adam Powers",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apowers313/fido2-server-demo"
+  },
+  "bugs": {
+    "url": "https://github.com/apowers313/fido2-server-demo/issues",
+    "email": "apowers@ato.ms"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "gh-pages": "^0.12.0",
+    "ink-docstrap": "^1.3.0",
+    "istanbul": "^0.4.5",
+    "istanbul-coveralls": "^1.0.3",
+    "jsdoc": "^3.4.3",
+    "mocha": "^2.5.3",
+    "mockery": "^2.0.0",
+    "sinon": "^1.17.6"
+  },
+  "dependencies": {}
+}
