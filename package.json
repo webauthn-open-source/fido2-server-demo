@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "istanbul cover _mocha",
+    "start": "node index.js",
     "docs": "jsdoc -c ./.jsdoc-conf.json",
     "publish": "istanbul-coveralls && gh-pages --silent --repo https://$GH_TOKEN@github.com/apowers313/fido2-server-demo.git --dist docs"
   },
@@ -34,5 +35,9 @@
     "mockery": "^2.0.0",
     "sinon": "^1.17.6"
   },
-  "dependencies": {}
+  "dependencies": {
+    "simple-component-manager": "^0.8.0",
+    "fido2-server-component-certs": "^0.0.1",
+    "fido2-server-component-web": "^0.0.1"
+  }
 }
