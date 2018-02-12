@@ -12,7 +12,7 @@
         "excludePattern": "node_modules"
     },
     "templates": {
-        "systemName": "FIDO2 Server Demo (edit .jsdoc-conf.json)",
+        "systemName": "FIDO2 Server Demo",
         "copyright": "Copyright 2016, Adam Powers",
         "linenums": true,
         "theme": "cerulean"
