@@ -1,0 +1,41 @@
+{
+    "components": [{
+        "name": "http",
+        "type": "generic",
+        "package": "/Users/apowers/Projects/components/component-web",
+        "pre-config": [{
+            "set-port": 8080,
+            "add-static": {
+                "path": "/",
+                "dir": "webauthn-yubiclone"
+            }
+        }]
+    }, {
+        "name": "https",
+        "type": "generic",
+        "package": "/Users/apowers/Projects/components/component-web",
+        "pre-config": [{
+            "set-port": 8443,
+            "set-https": true,
+            "add-static": {
+                "path": "/",
+                "dir": "webauthn-yubiclone"
+            }
+        }]
+    }, {
+        "name": "cert-manager",
+        "type": "generic",
+        "package": "/Users/apowers/Projects/components/component-certs-static",
+        "pre-config": [{
+            "set-cert-file": "/Users/apowers/Projects/components/component-certs-static/test/helpers/certs/cert.pem",
+            "set-key-file": "/Users/apowers/Projects/components/component-certs-static/test/helpers/certs/key.pem"
+        }]
+    }, {
+        "name": "fido2",
+        "type": "generic",
+        "package": "/Users/apowers/Projects/fido2-stack/component-fido2",
+        "pre-config": [{
+            "set-server-domain": "localhost"
+        }]
+    }]
+}

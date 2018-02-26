@@ -18,7 +18,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/apowers313/fido2-server-demo"
+    "url": "git+https://github.com/apowers313/fido2-server-demo.git"
   },
   "bugs": {
     "url": "https://github.com/apowers313/fido2-server-demo/issues",
@@ -32,12 +32,14 @@
     "istanbul-coveralls": "^1.0.3",
     "jsdoc": "^3.4.3",
     "mocha": "^2.5.3",
-    "mockery": "^2.0.0",
     "sinon": "^1.17.6"
   },
   "dependencies": {
-    "simple-component-manager": "^0.8.0",
-    "fido2-server-component-certs": "^0.0.1",
-    "fido2-server-component-web": "^0.0.1"
+    "simple-component-manager": "/Users/apowers/Projects/components/simple-component-manager"
+  },
+  "homepage": "https://github.com/apowers313/fido2-server-demo#readme",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
   }
 }

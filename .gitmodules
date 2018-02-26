@@ -1,0 +1,3 @@
+[submodule "webauthn-yubiclone"]
+	path = webauthn-yubiclone
+	url = https://github.com/apowers313/webauthn-yubiclone.git
