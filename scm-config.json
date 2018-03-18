@@ -17,6 +17,9 @@
         "pre-config": [{
             "set-port": 8443,
             "set-https": true,
+            "set-domain": "localhost",
+            "set-body-parser": "json",
+            "set-enable-session": true,
             "add-static": {
                 "path": "/",
                 "dir": "webauthn-yubiclone"
@@ -37,5 +40,9 @@
         "pre-config": [{
             "set-server-domain": "localhost"
         }]
+    }, {
+        "name": "uds",
+        "type": "generic",
+        "package": "/Users/apowers/Projects/components/component-uds-json"
     }]
 }
