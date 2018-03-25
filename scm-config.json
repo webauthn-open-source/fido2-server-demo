@@ -1,21 +1,32 @@
+// scm-config
+//
+// this is a JSON file that allows JavaScript-style comments
 {
+    // setuid and setgid are only required if running with sudo
+    // you can delete these lines and run without sudo if your http/https ports don't require special privledges
+    "setuid": 501,
+    "setgid": 20,
     "components": [{
         "name": "http",
         "type": "generic",
-        "package": "/Users/apowers/Projects/components/component-web",
+        "package": "component-web@1.0.0-alpha2",
         "pre-config": [{
-            "set-port": 8080,
-            "add-static": {
-                "path": "/",
-                "dir": "webauthn-yubiclone"
+            // setting the port isn't technically required here, but is included for convenience
+            "set-port": 80
+        }],
+        "post-config": [{
+            "set-redirect": {
+                "destProtocol": "https",
+                "destTemporary": false
             }
         }]
     }, {
         "name": "https",
         "type": "generic",
-        "package": "/Users/apowers/Projects/components/component-web",
+        "package": "component-web@1.0.0-alpha2",
         "pre-config": [{
-            "set-port": 8443,
+            // setting the port isn't technically required here, but is included for convenience
+            "set-port": 443,
             "set-https": true,
             "set-domain": "localhost",
             "set-body-parser": "json",
@@ -28,21 +39,35 @@
     }, {
         "name": "cert-manager",
         "type": "generic",
-        "package": "/Users/apowers/Projects/components/component-certs-static",
+        "package": "component-certs-static@1.0.0-alpha1",
         "pre-config": [{
-            "set-cert-file": "/Users/apowers/Projects/components/component-certs-static/test/helpers/certs/cert.pem",
-            "set-key-file": "/Users/apowers/Projects/components/component-certs-static/test/helpers/certs/key.pem"
+            "set-cert-file": "data/node_modules/component-certs-static/test/helpers/certs/cert.pem",
+            "set-key-file": "data/node_modules/component-certs-static/test/helpers/certs/key.pem"
         }]
     }, {
         "name": "fido2",
         "type": "generic",
-        "package": "/Users/apowers/Projects/fido2-stack/component-fido2",
-        "pre-config": [{
-            "set-server-domain": "localhost"
-        }]
+        "package": "component-fido2@1.0.0-alpha1"
     }, {
         "name": "uds",
         "type": "generic",
-        "package": "/Users/apowers/Projects/components/component-uds-json"
+        "package": "component-uds-json@1.0.0-alpha1"
+    }, {
+        "name": "logger",
+        "type": "logger",
+        "package": "component-logger-winston@1.0.0-alpha2",
+        "pre-config": [{
+            "set-level": "silly",
+            "add-transport": [{
+                // log to the screen...
+                "type": "console",
+                "colorize": true
+            }, {
+                // ...and log to a file
+                // see winston's npm page for more transport configuration options
+                "type": "file",
+                "filename": "scm.log"
+            }]
+        }]
     }]
 }
