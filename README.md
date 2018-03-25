@@ -11,6 +11,8 @@ npm install
 npm start
 ```
 
+Note: this project uses `async` / `await` and requires node.js 7.6+.
+
 ## Configuration
 
 Edit `scm-config.json` to change ports, domains, and certificate paths.
