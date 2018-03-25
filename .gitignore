@@ -6,3 +6,4 @@ coverage
 fido2-server-demo.sublime-project
 fido2-server-demo.sublime-workspace
 package-lock.json
+*.log
