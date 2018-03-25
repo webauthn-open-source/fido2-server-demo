@@ -47,7 +47,7 @@
     }, {
         "name": "fido2",
         "type": "generic",
-        "package": "component-fido2@1.0.0-alpha1"
+        "package": "component-fido2@1.0.0-alpha2"
     }, {
         "name": "uds",
         "type": "generic",
