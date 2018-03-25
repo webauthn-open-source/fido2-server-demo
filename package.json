@@ -1,13 +1,12 @@
 {
   "name": "fido2-server-demo",
-  "version": "0.0.1",
+  "version": "1.0.0-alpha1",
   "description": "Examples and demo code for FIDO2 / WebAuthn servers",
   "main": "index.js",
   "scripts": {
     "test": "istanbul cover _mocha",
-    "start": "node index.js",
-    "docs": "jsdoc -c ./.jsdoc-conf.json",
-    "publish": "istanbul-coveralls && gh-pages --silent --repo https://$GH_TOKEN@github.com/apowers313/fido2-server-demo.git --dist docs"
+    "start": "node_modules/.bin/scm",
+    "docs": "jsdoc -c ./.jsdoc-conf.json"
   },
   "keywords": [
     "fido",
