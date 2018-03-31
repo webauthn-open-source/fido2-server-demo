@@ -11,7 +11,7 @@ npm install
 npm start
 ```
 
-Note: this project uses `async` / `await` and requires node.js 7.6+.
+Note: this project uses `async` / `await` and requires node.js 7.6+
 
 ## Configuration
 
