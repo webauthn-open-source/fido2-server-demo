@@ -1,6 +1,6 @@
 {
   "name": "fido2-server-demo",
-  "version": "1.0.0-alpha1",
+  "version": "1.0.0",
   "description": "Examples and demo code for FIDO2 / WebAuthn servers",
   "main": "index.js",
   "scripts": {
@@ -34,7 +34,7 @@
     "sinon": "^1.17.6"
   },
   "dependencies": {
-    "simple-component-manager": "/Users/apowers/Projects/components/simple-component-manager"
+    "simple-component-manager": "^1.0.0"
   },
   "homepage": "https://github.com/apowers313/fido2-server-demo#readme",
   "directories": {
