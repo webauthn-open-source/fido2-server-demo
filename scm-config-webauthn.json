@@ -9,7 +9,7 @@
     "components": [{
         "name": "http",
         "type": "generic",
-        "package": "component-web@1.0.0-alpha2",
+        "package": "component-web",
         "pre-config": [{
             // setting the port isn't technically required here, but is included for convenience
             "set-port": 80
@@ -23,7 +23,7 @@
     }, {
         "name": "https",
         "type": "generic",
-        "package": "component-web@1.0.0-alpha2",
+        "package": "component-web",
         "pre-config": [{
             // setting the port isn't technically required here, but is included for convenience
             "set-port": 443,
@@ -47,15 +47,15 @@
     }, {
         "name": "fido2",
         "type": "generic",
-        "package": "component-fido2@1.0.0-alpha3"
+        "package": "component-fido2"
     }, {
         "name": "uds",
         "type": "generic",
-        "package": "component-uds-json@1.0.0-alpha1"
+        "package": "component-uds-json"
     }, {
         "name": "logger",
         "type": "logger",
-        "package": "component-logger-winston@1.0.0-alpha2",
+        "package": "component-logger-winston",
         "pre-config": [{
             "set-level": "silly",
             "add-transport": [{
