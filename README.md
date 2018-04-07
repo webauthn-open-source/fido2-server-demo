@@ -33,6 +33,8 @@ The following components are used for this server:
 
 If you find bugs or need help, open a GitHub issue. If you are so inspired, feel free to submit a pull request. Also feel free to just send a note saying that you're using the server and what you think of it -- it's nice to know when a project is being used.
 
+You can also find me on Twitter at [@apowers313](https://twitter.com/apowers313).
+
 ## Security Considerations
 
 This server does a number of things that shouldn't be done in a real server. These are for demonstration purposes and will be phased out over the next couple months:
