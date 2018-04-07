@@ -39,7 +39,7 @@
     }, {
         "name": "cert-manager",
         "type": "generic",
-        "package": "component-certs-static@1.0.0-alpha1",
+        "package": "component-certs-static",
         "pre-config": [{
             "set-cert-file": "/etc/letsencrypt/live/webauthn.org/cert.pem",
             "set-key-file": "/etc/letsencrypt/live/webauthn.org/privkey.pem"
