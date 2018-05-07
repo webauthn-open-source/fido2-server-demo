@@ -1,3 +1,6 @@
 [submodule "webauthn-yubiclone"]
 	path = webauthn-yubiclone
 	url = https://github.com/apowers313/webauthn-yubiclone.git
+[submodule "fido2-swagger"]
+	path = fido2-swagger
+	url = https://github.com/apowers313/fido2-swagger
