@@ -30,10 +30,16 @@
             "set-https": true,
             "set-domain": "webauthn.org",
             "set-body-parser": "json",
-            "set-enable-session": true,
+            "set-enable-session": true
+        }, { // demo UI for WebAuthn
             "add-static": {
                 "path": "/",
                 "dir": "webauthn-yubiclone"
+            }
+        }, { // serve up swagger UI
+            "add-static": {
+                "path": "/swagger",
+                "dir": "fido2-swagger"
             }
         }]
     }, {
@@ -47,7 +53,12 @@
     }, {
         "name": "fido2",
         "type": "generic",
-        "package": "component-fido2"
+        "package": "component-fido2",
+        "pre-config": [{
+            "enable-dangerous-open-registration": true,
+            "enable-dangerous-xmit-debug-info": true,
+            "set-service-name": "WebAuthn.org"
+        }]
     }, {
         "name": "uds",
         "type": "generic",
