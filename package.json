@@ -34,7 +34,7 @@
     "sinon": "^1.17.6"
   },
   "dependencies": {
-    "simple-component-manager": "^1.0.0"
+    "simple-component-manager": "^1.0.3"
   },
   "homepage": "https://github.com/apowers313/fido2-server-demo#readme",
   "directories": {
