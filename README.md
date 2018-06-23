@@ -5,7 +5,7 @@ Currently in alpha. Use with caution. Not production ready.
 ## Installation
 
 ``` bash
-git clone --recurisve https://github.com/apowers313/fido2-server-demo
+git clone --recursive https://github.com/apowers313/fido2-server-demo
 cd fido2-server-demo
 npm install
 npm start
