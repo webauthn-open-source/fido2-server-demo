@@ -11,7 +11,9 @@ npm install
 npm start
 ```
 
-Note: this project uses `async` / `await` and requires node.js 7.6+
+Note: this has been developed and tested on MacOS X, and [webauthn.org](https://webauthn.org) is running this server on Ubuntu Linux. It has not been tested on Windows -- please open [issues](https://github.com/apowers313/fido2-server-demo/issues) for Windows bugs.
+
+Note: this project uses `async` / `await` and requires node.js 7.6+. If you are running OpenSSH >1.1.0 (e.g. - Debian Buster), it requires node.js 10+.
 
 ## Configuration
 
