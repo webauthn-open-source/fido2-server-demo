@@ -9,7 +9,7 @@
     "components": [{
         "name": "http",
         "type": "generic",
-        "package": "component-web",
+        "package": "node_modules/component-web",
         "pre-config": [{
             "set-port": 8888
         }],
@@ -23,7 +23,7 @@
     }, {
         "name": "https",
         "type": "generic",
-        "package": "component-web",
+        "package": "node_modules/component-web",
         "pre-config": [{
             "set-port": 8443,
             "set-https": true,
@@ -44,7 +44,7 @@
     }, {
         "name": "cert-manager",
         "type": "generic",
-        "package": "component-certs-static",
+        "package": "node_modules/component-certs-static",
         "pre-config": [{
             "set-cert-file": "data/node_modules/component-certs-static/test/helpers/certs/cert.pem",
             "set-key-file": "data/node_modules/component-certs-static/test/helpers/certs/key.pem"
@@ -52,7 +52,7 @@
     }, {
         "name": "fido2",
         "type": "generic",
-        "package": "component-fido2",
+        "package": "node_modules/component-fido2",
         "pre-config": [{
             "enable-dangerous-open-registration": true,
             "enable-dangerous-xmit-debug-info": true,
@@ -61,11 +61,11 @@
     }, {
         "name": "uds",
         "type": "generic",
-        "package": "component-uds-json"
+        "package": "node_modules/component-uds-json"
     }, {
         "name": "logger",
         "type": "logger",
-        "package": "component-logger-winston",
+        "package": "node_modules/component-logger-winston",
         "pre-config": [{
             "set-level": "silly",
             "add-transport": [{

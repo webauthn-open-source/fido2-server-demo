@@ -4,14 +4,22 @@
   "description": "Examples and demo code for FIDO2 / WebAuthn servers",
   "main": "index.js",
   "scripts": {
-    "test": "istanbul cover _mocha",
-    "start": "node_modules/.bin/scm",
-    "docs": "jsdoc -c ./.jsdoc-conf.json"
+    "test": "mocha",
+    "start": "scm",
+    "docker:build:prod-canary": "docker build --target=production -t apowers313/fido2-server:prod-canary .",
+    "docker:build:test-canary": "docker build --target=test -t apowers313/fido2-server:test-canary .",
+    "docker:test:canary": "docker run apowers313/fido2-server:test-canary",
+    "docker:build:release": "docker build --target=test -t apowers313/fido2-server:test . && docker run apowers313/fido2-server:test && docker build --target=production -t apowers313/fido2-server:latest .",
+    "docker:test:canary": "docker run apowers313/fido2-server:test-canary",
+    "docker:login": "echo \"$DOCKER_PASSWORD\" | docker login -u \"$DOCKER_USERNAME\" --password-stdin",
+    "docker:release:canary": "docker push apowers313/fido2-server:test-canary && docker push apowers313/fido2-server:prod-canary",
+    "docker:release": "docker push apowers313/fido2-server:test && docker push apowers313/fido2-server:latest"
   },
   "keywords": [
     "fido",
     "fido2",
-    "webauthn"
+    "webauthn",
+    "server"
   ],
   "author": "Adam Powers",
   "license": "MIT",
@@ -34,6 +42,11 @@
     "sinon": "^1.17.6"
   },
   "dependencies": {
+    "component-certs-static": "^1.0.1",
+    "component-fido2": "^1.0.11",
+    "component-logger-winston": "^1.0.1",
+    "component-uds-json": "^1.0.3",
+    "component-web": "^1.0.1",
     "simple-component-manager": "^1.0.4"
   },
   "homepage": "https://github.com/apowers313/fido2-server-demo#readme",
