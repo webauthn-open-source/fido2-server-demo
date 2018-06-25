@@ -16,7 +16,7 @@ before_script:
   - npm run docker:build:prod-canary
   - npm run docker:build:test-canary
 script:
-  - docker run docker:test:canary
+  - npm run docker:test:canary
 deploy:
   provider: script
   script:
