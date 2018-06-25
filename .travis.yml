@@ -12,15 +12,14 @@ node_js:
 # before_install:
 #   - npm i -g npm@^2.0.0
 before_script:
+ - 'curl -Lo travis_after_all.py https://git.io/vLSON'
   - npm prune
   - npm run docker:build:prod-canary
   - npm run docker:build:test-canary
 script:
   - npm run docker:test:canary
-deploy:
-  provider: script
-  script:
+after_success:
+  - python travis_after_all.py
+  - export $(cat .to_export_back)
   - npm run docker:login
   - npm run docker:release:canary
-  on:
-    branch: master
