@@ -9,8 +9,6 @@ notifications:
 language: node_js
 node_js:
   - '10'
-# before_install:
-#   - npm i -g npm@^2.0.0
 before_script:
  - 'curl -Lo travis_after_all.py https://git.io/vLSON'
   - npm prune
