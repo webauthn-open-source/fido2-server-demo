@@ -1,9 +1,10 @@
 [![Waffle.io - Columns and their card count](https://badge.waffle.io/apowers313/fido2-server-demo.svg?columns=all)](https://waffle.io/apowers313/fido2-server-demo)
 
-Currently in alpha. Use with caution. Not production ready.
+Currently in beta. Good for demos and prototypes, but not production ready.
 
 ## Installation
 
+### NPM
 ``` bash
 git clone --recursive https://github.com/apowers313/fido2-server-demo
 cd fido2-server-demo
@@ -14,6 +15,13 @@ npm start
 Note: this has been developed and tested on MacOS X, and [webauthn.org](https://webauthn.org) is running this server on Ubuntu Linux. It has not been tested on Windows -- please open [issues](https://github.com/apowers313/fido2-server-demo/issues) for Windows bugs.
 
 Note: this project uses `async` / `await` and requires node.js 7.6+. If you are running OpenSSH >1.1.0 (e.g. - Debian Buster), it requires node.js 10+.
+
+### Docker
+There is also a Docker image available, which makes it much less likely that you will have configuration problems. Here are the instructions for using the Docker image.
+
+* Install [Docker for Windows](https://docs.docker.com/docker-for-windows/install/#start-docker-for-windows) or [Docker for Mac](https://www.docker.com/docker-mac) or use one of the [several other install options](https://docs.docker.com/install/).
+* run the command: `docker run -d -p 8888:8888 -p 8443:8443 apowers313/fido2-server:prod-canary`
+* open https://localhost:8443
 
 ## Configuration
 
@@ -45,3 +53,38 @@ This server does a number of things that shouldn't be done in a real server. The
 2. This allows both User Presence (UP) and User Verification (UV) to be used for first-factor authentication. Typically only UV should be used for first-factor authentication, but given that U2F tokens are going to be the most commonly available authenticator in the short term, this server still allows UP-only authenticators to behave in a password-less fashion.
 3. User accounts are wide open -- the session is not currently checked for previous authentication, so anyone can add any authenticator to any username. This is great for demos (and inspired by [demo.yubico.com/u2f](https://demo.yubico.com/u2f)) but not how things would work in the real world. This will change in the near future.
 
+## Sponsor
+Note that while I used to be Technical Director for FIDO Alliance (and I am currently the Technical Advisor for FIDO Alliance), THIS PROJECT IS NOT ENDORSED OR SPONSORED BY FIDO ALLIANCE.
+
+Work for this project is supported by my consulting company: [WebAuthn Consulting](https://webauthn.consulting/).
+
+## Other FIDO2 / WebAuthn Projects
+There are a number of other great FIDO2 and WebAuthn projects out there. I love all things FIDO2 and WebAuthn, so here's a list of other projects (Note: I'm not affiliated with any of these projects):
+
+### Open Source Servers
+
+* [Google / Java](https://github.com/google/webauthndemo)
+* [MasterCard / Java (Spring)](https://github.com/Mastercard/fido2-rp-spring)
+* [Mozilla / JavaScript (Browser)](https://github.com/jcjones/webauthn.bin.coffee)
+* [FIDO Alliance / JavaScript](https://github.com/fido-alliance/webauthn-demo)
+* [cedarcode / Ruby](https://github.com/cedarcode/webauthn-ruby)
+* [abergs / .NET](https://github.com/abergs/fido2-net-lib)
+
+### Open Source Clients
+
+* [apowers313 / JavaScript (Browser)](https://github.com/apowers313/webauthn-simple-app)
+
+### Open Source CTAP2
+
+* [Yubico / C](https://developers.yubico.com/libfido2/)
+* [Yubico / Python](https://developers.yubico.com/python-fido2/)
+
+### Open Access Servers
+
+* apowers313: [webauthn.org](https://webauthn.org)
+* Duo: [webauthn.io](https://webauthn.io/)
+* Mozilla: [webauthn.bin.coffee](https://webauthn.bin.coffee/)
+* Yubico: [demo.yubico.com/webauthn](https://demo.yubico.com/webauthn)
+* watahani: [webauthn-tutorial-haniyama.now.sh](https://webauthn-tutorial-haniyama.now.sh/)
+
+If your project isn't listed here and you would like it to be, drop me a note and I would be happy to add it.
