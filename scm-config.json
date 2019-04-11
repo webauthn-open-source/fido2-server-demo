@@ -11,12 +11,12 @@
         "type": "generic",
         "package": "node_modules/component-web",
         "pre-config": [{
-            "set-port": 8888
+            "set-port": 80
         }],
         "post-config": [{
             "set-redirect": {
                 "destProtocol": "https",
-                "destPort": 8443,
+                "destPort": 80,
                 "destTemporary": false
             }
         }]
