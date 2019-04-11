@@ -25,7 +25,7 @@
         "type": "generic",
         "package": "node_modules/component-web",
         "pre-config": [{
-            "set-port": 8443,
+            "set-port": 80,
             "set-https": true,
             "set-domain": "grigslogin.herokuapp.com",
             "set-body-parser": "json",
