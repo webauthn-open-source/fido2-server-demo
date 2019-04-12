@@ -1,1 +1,1 @@
-web: ls -A && ls $HOME/.apt && which g++ && echo $PATH && npm ci && npm start
+web: PATH="$BUILD_DIR/.apt/usr/bin:$PATH" npm ci && npm start
