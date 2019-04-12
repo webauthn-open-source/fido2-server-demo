@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Examples and demo code for FIDO2 / WebAuthn servers",
   "main": "index.js",
+  "engines": {
+    "npm": "6.1.0"
+  },
   "scripts": {
     "test": "mocha",
     "start": "scm",
