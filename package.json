@@ -43,14 +43,14 @@
     "istanbul-coveralls": "^1.0.3",
     "jsdoc": "^3.4.3",
     "mocha": "^2.5.3",
-    "sinon": "^1.17.6",
-    "component-logger-winston": "^1.0.1"
+    "sinon": "^1.17.6"
   },
   "dependencies": {
     "component-certs-static": "^1.0.1",
     "component-fido2": "^1.0.11",
     "component-uds-json": "^1.0.3",
     "component-web": "^1.0.1",
+    "component-logger-winston": "^1.0.1",
     "simple-component-manager": "^1.0.4"
   },
   "homepage": "https://github.com/apowers313/fido2-server-demo#readme",
