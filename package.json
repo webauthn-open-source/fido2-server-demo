@@ -4,6 +4,7 @@
   "description": "Examples and demo code for FIDO2 / WebAuthn servers",
   "main": "index.js",
   "engines": {
+    "node": "10.5.0",
     "npm": "6.1.0"
   },
   "scripts": {
