@@ -1,1 +1,1 @@
-web: npm ci && npm start
+web: which g++ && echo $PATH && npm ci && npm start
