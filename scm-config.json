@@ -16,7 +16,7 @@
         "post-config": [{
             "set-redirect": {
                 "destProtocol": "https",
-                "destPort": 8443,
+                "destPort": 80,
                 "destTemporary": false
             }
         }]
