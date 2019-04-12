@@ -3,3 +3,4 @@ libpq-dev
 libzmq3-dbg
 libzmq3-dev
 libzmq3
+libavahi-compat-libdnssd-dev
