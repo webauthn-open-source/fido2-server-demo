@@ -16,7 +16,7 @@
         "post-config": [{
             "set-redirect": {
                 "destProtocol": "https",
-                "destPort": 80,
+                "destPort": 8443,
                 "destTemporary": false
             }
         }]
@@ -25,7 +25,7 @@
         "type": "generic",
         "package": "node_modules/component-web",
         "pre-config": [{
-            "set-port": 80,
+            "set-port": 8443,
             "set-https": true,
             "set-domain": "grigslogin.herokuapp.com",
             "set-body-parser": "json",
