@@ -27,7 +27,7 @@
         "pre-config": [{
             "set-port": 8443,
             "set-https": true,
-            "set-domain": "grigslogin.herokuapp.com",
+            "set-domain": "134.209.7.250",
             "set-body-parser": "json",
             "set-enable-session": true
         }, { // demo UI for WebAuthn
@@ -56,7 +56,7 @@
         "pre-config": [{
             "enable-dangerous-open-registration": true,
             "enable-dangerous-xmit-debug-info": true,
-            "set-service-name": "grigslogin.herokuapp.com"
+            "set-service-name": "134.209.7.250"
         }]
     }, {
         "name": "uds",
