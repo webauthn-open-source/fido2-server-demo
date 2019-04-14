@@ -2,7 +2,7 @@
   "name": "fido2-server-demo",
   "version": "1.0.0",
   "description": "Examples and demo code for FIDO2 / WebAuthn servers",
-  "main": "index.js"
+  "main": "index.js",
   "scripts": {
     "test": "mocha",
     "start": "scm",
