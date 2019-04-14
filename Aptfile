@@ -1,3 +1,4 @@
+build-essential
 g++
 libpq-dev
 libzmq3-dbg
