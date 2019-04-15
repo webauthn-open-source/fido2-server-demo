@@ -27,7 +27,7 @@
         "pre-config": [{
             "set-port": 8443,
             "set-https": true,
-            "set-domain": "134.209.7.250",
+            "set-domain": "localhost",
             "set-body-parser": "json",
             "set-enable-session": true
         }, { // demo UI for WebAuthn
