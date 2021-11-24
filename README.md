@@ -81,7 +81,6 @@ There are a number of other great FIDO2 and WebAuthn projects out there. I love 
 
 ### Open Access Servers
 
-* apowers313: [webauthn.org](https://webauthn.org)
 * Duo: [webauthn.io](https://webauthn.io/)
 * Mozilla: [webauthn.bin.coffee](https://webauthn.bin.coffee/)
 * Yubico: [demo.yubico.com/webauthn](https://demo.yubico.com/webauthn)
